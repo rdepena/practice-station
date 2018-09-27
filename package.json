@@ -1,0 +1,17 @@
+{
+  "name": "metronome-stuff",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "serve": "live-server --watch='index.html','src/**/*.js'"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "live-server": "^1.2.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.1.3",
+    "lit-html": "^0.11.3"
+  }
+}
