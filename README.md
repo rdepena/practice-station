@@ -1,14 +1,3 @@
-# typescript-template
-My Typescript project template
+#### run
 
-#### ts-lint
-
-    npm run lint-ts
-
-#### build ts
-
-    npm run build-ts
-
-#### test
-
-    npm test
+    npm run serve
