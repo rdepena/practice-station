@@ -9,7 +9,6 @@ export class Timer  extends HTMLElement {
     constructor() {
         super();
 
-        this.attachShadow({mode: 'open'});
         this.timeWorker = new Worker('src/timer-worker.js');
         this.selectedTime = 0;
         this.time = 0;
@@ -88,7 +87,7 @@ export class Timer  extends HTMLElement {
                 </div>
             </form>`;
             
-            render(timer(Math.floor(time / 60), Math.floor(time % 60)), this.shadowRoot);
+            render(timer(Math.floor(time / 60), Math.floor(time % 60)), this);
         });
     }
 }

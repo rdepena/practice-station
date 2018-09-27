@@ -5,7 +5,6 @@ export class Metronome extends HTMLElement {
     constructor() {
         super();
         const value = this.getAttribute('value');
-        this.attachShadow({ mode: 'open' });
         this.timeWorker = new Worker('src/timer-worker.js');
 
         this.timeWorker.onmessage = (e) => {
@@ -34,7 +33,7 @@ export class Metronome extends HTMLElement {
                     <label for="formControlRange">Metronome:</label>
                     <input @change=${(e) => this.render(e.srcElement.valueAsNumber)}
                         type="range" min="0" max="260" .value="${val}"
-                        class="form-control-range" step="1" id="formControlRange">
+                        class="custom-range" step="1" id="formControlRange">
                 </div>
                 <div class="form-group">
                     <span>${val} Bpm</span>
@@ -45,7 +44,7 @@ export class Metronome extends HTMLElement {
                 <div>
             </form>`;
 
-            render(met(val), this.shadowRoot);
+            render(met(val), this);
         });
     }
 }
