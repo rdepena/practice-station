@@ -38,10 +38,8 @@ export class Metronome extends HTMLElement {
                 <div class="form-group">
                     <span>${val} Bpm</span>
                 </div>
-                <div class="form-group">
-                    <button @click=${ () => this.toggle(val)} type="button"
-                        class="btn btn-primary">Start/Stop</button>
-                <div>
+                <div class="form-group" style="display: block; height: 20px;
+                width: 20px; background-color:${display ? "blue": "gray" }"></div>
             </form>`;
 
             render(met(val), this);

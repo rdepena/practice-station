@@ -18,11 +18,13 @@ function precache() {
             './src/timer.js',
             './src/index.js',
             './src/metronome.js',
+            './src/volume.js',
             './src/timer.js',
             './src/timer-worker.js',
             './src/beep.js',
             './node_modules/lit-html/lit-html.js',
-            './servic-worker.js'
+            './servic-worker.js',
+            './images/*'
         ]);
     }).catch(err => console.error(err));
 }
